@@ -18,6 +18,20 @@ Ext.application({
           }
         },
         {
+          xtype: 'button',
+          text: 'hide',
+          handler: function() {
+            this.up().down('#myComponent').hide();
+          }
+        },
+        {
+          xtype: 'button',
+          text: 'show',
+          handler: function() {
+            this.up().down('#myComponent').show();
+          }
+        },
+        {
           itemId: 'myComponent',
           tpl: 'name: {first} {last}',
           data: {
