@@ -4,6 +4,14 @@ Ext.define('MyApp.Session', {
     description: '',
     level: 'beginner'
   },
+  
+  applyTitle: function(title){
+    if (title === undefined) {
+      alert('title undefined');
+    }
+    return title;
+  },
+
   constructor: function(config) {
     this.initConfig(config);
   }
@@ -13,6 +21,7 @@ let session = Ext.create('MyApp.Session', {
 
 });
 
-session.setTitle("Peter's awesome session");
+let x;
+session.setTitle(x);
 
 console.log(session.getTitle());
