@@ -1,27 +1,45 @@
-Ext.define('MyApp.Session', {
-  config: {
-    title: '',
-    description: '',
-    level: 'beginner'
-  },
-  
-  applyTitle: function(title){
-    if (title === undefined) {
-      alert('title undefined');
-    }
-    return title;
-  },
-
-  constructor: function(config) {
-    this.initConfig(config);
+Ext.application({
+  name: 'MyApp',
+  launch: function () {
+    Ext.create('Ext.container.Viewport', {
+      items: [
+        {
+          xtype: 'component',
+          html: '<p>If you click on me, I will disappear.</p>',
+          listeners: {
+            click: {
+              element: 'el',
+              fn: function() {
+                this.hide();
+              }
+            }
+          }
+        },
+        {
+          xtype: 'component',
+          html: '<p>Click me away!</p>',
+          listeners: {
+            click: {
+              element: 'el',
+              fn: function() {
+                this.hide();
+              }
+            }
+          }
+        },
+        {
+          xtype: 'component',
+          html: '<p>Click me too!</p>',
+          listeners: {
+            click: {
+              element: 'el',
+              fn: function() {
+                this.hide();
+              }
+            }
+          }
+        }
+      ]
+    })
   }
 });
-
-let session = Ext.create('MyApp.Session', {
-
-});
-
-let x;
-session.setTitle(x);
-
-console.log(session.getTitle());
