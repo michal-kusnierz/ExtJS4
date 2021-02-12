@@ -1,9 +1,11 @@
-let updateConsole = function () {
-  console.log(Ext.Date.format(new Date(), 'g:i:s A'));
-};
+Ext.define('MyApp.Session', {
+  config: {
+    title: '',
+    description: '',
+    level: 'beginner'
+  }
+});
 
-let runner = new Ext.util.TaskRunner(),
-  task = runner.start({
-    run: updateConsole,
-    interval: 1000
-  });
+let session = Ext.create('MyApp.Session', {
+
+})
