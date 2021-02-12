@@ -1,0 +1,13 @@
+a {
+  margin: 1em;
+  padding: .2em 1em;
+  background-color: #644;
+  color: #fff;
+  border: 1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+a:hover {
+  background-color: #755;
+  color: #eee;
+}
