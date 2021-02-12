@@ -5,7 +5,8 @@ Ext.application({
       items: [
         {
           xtype: 'component',
-          html: 'My First ExtJS Application'
+          html: 'My First ExtJS Application',
+          padding: 20
         }
       ]
     });
