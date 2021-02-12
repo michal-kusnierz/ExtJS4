@@ -3,6 +3,9 @@ Ext.define('MyApp.Session', {
     title: '',
     description: '',
     level: 'beginner'
+  },
+  constructor: function(config) {
+    this.initConfig(config);
   }
 });
 
