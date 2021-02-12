@@ -11,4 +11,8 @@ Ext.define('MyApp.Session', {
 
 let session = Ext.create('MyApp.Session', {
 
-})
+});
+
+session.setTitle("Peter's awesome session");
+
+console.log(session.getTitle());
