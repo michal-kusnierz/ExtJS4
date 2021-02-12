@@ -1,3 +1,11 @@
+body {
+  margin: 1em;
+}
+
+.x-panel {
+  margin: 2em 1em;
+}
+
 a {
   margin: 1em;
   padding: .2em 1em;
