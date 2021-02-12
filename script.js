@@ -5,9 +5,13 @@ Ext.application({
       items: [
         {
           xtype: 'button',
-          text: 'disable'
+          text: 'disable',
+          handler: function() {
+            this.up().down('#myComponent').disable();
+          }
         },
         {
+          itemId: 'myComponent',
           tpl: 'name: {first} {last}',
           data: {
             first: 'Peter',
