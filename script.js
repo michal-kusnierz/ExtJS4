@@ -4,9 +4,14 @@ Ext.application({
     Ext.create('Ext.container.Viewport', {
       items: [
         {
-          xtype: 'component',
-          html: 'My First ExtJS Application',
-          padding: 20
+          // xtype: 'component',
+          // html: 'My First ExtJS Application',
+          padding: 20,
+          tpl: 'name: {first} {last}',
+          data: {
+            first: 'Peter',
+            last: 'Kellner'
+          }
         }
       ]
     });
