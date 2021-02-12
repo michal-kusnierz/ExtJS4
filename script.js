@@ -11,6 +11,13 @@ Ext.application({
           }
         },
         {
+          xtype: 'button',
+          text: 'enable',
+          handler: function() {
+            this.up().down('#myComponent').enable();
+          }
+        },
+        {
           itemId: 'myComponent',
           tpl: 'name: {first} {last}',
           data: {
