@@ -9,7 +9,14 @@ Ext.define('SessionModel', {
   validations: [
     { type: 'length', field: 'title', min: 3 },
     { type: 'inclusion', field: 'sessionLevel', list: [1,2,3] }
-  ]
+  ],
+  proxy: {
+    type: 'rest',
+    url: '/api/session',
+    reader: {
+      type: 'json'
+    }
+  }
 });
 
 let mySession1 = Ext.create('SessionModel', {
@@ -17,14 +24,14 @@ let mySession1 = Ext.create('SessionModel', {
   sessionLevel: 4
 });
 
-// debugger;
+debugger;
 if (!mySession1.isValid()) {
   let errors = mySession1.validate();
   errors.each(function(rec) {
     console.log(rec);
   });
 } else {
-  // debugger;
+  debugger;
 }
 
 let mySession2 = Ext.create('SessionModel', {
