@@ -3,7 +3,11 @@ Ext.define('SessionModel', {
   fields: ['id','title','sessionLevel','approved']
 });
 
-let mySession = Ext.create('SessionModel', {
+let mySession1 = Ext.create('SessionModel', {
   title: 'C++',
   sessionLevel: 2
+});
+let mySession2 = Ext.create('SessionModel', {
+  title: 'C#',
+  sessionLevel: 3
 });
