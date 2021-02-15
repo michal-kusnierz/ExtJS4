@@ -17,11 +17,14 @@ let mySession1 = Ext.create('SessionModel', {
   sessionLevel: 2
 });
 
+debugger;
 if (!mySession1.isValid()) {
   let errors = mySession1.validate();
   errors.each(function(rec) {
     console.log(rec);
   });
+} else {
+  debugger;
 }
 
 let mySession2 = Ext.create('SessionModel', {
