@@ -1,6 +1,11 @@
 Ext.define('SessionModel', {
   extend: 'Ext.data.Model',
-  fields: ['id','title','sessionLevel','approved']
+  fields: [
+    {name: 'id', type: 'int'},
+    'title',
+    'sessionLevel',
+    'approved'
+  ]
 });
 
 let mySession1 = Ext.create('SessionModel', {
