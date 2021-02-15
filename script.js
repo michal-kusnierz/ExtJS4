@@ -1,10 +1,10 @@
 Ext.define('SessionModel', {
   extend: 'Ext.data.Model',
   fields: [
-    {name: 'id', type: 'int'},
-    'title',
-    'sessionLevel',
-    'approved'
+    { name: 'id', type: 'int' },
+    { name: 'title', type: 'string' },
+    { name: 'sessionLevel', type: 'int' },
+    { name: 'approved', type: 'bool', defaultValue: false }
   ]
 });
 
