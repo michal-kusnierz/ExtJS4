@@ -2,45 +2,43 @@ Ext.application({
   name: 'App',
   launch: function() {
     Ext.create('Ext.container.Viewport', {
-      layout: {
-        type: 'border'
-      },
+      layout: 'fit',
       items: [
         {
-          region: 'west',
           xtype: 'panel',
-          layout: {
-            type: 'vbox',
-            align: 'stretch'
-          },
-          flex: 1,
-          split: true,
+          resizable: false,
+          layout: 'border',
+          collapsed: false,
           items: [
             {
-              xtype: 'panel',
-              html: 'Sessions Panel',
-              flex: 2
+              xtype: 'container',
+              region: 'center',
+              layout: {
+                type: 'vbox',
+                align: 'stretch'
+              },
+              items: [
+                {
+                  html: 'Sessions',
+                  flex: 6
+                },
+                {
+                  xtype: 'splitter',
+                  width: 1
+                },
+                {
+                  html: 'Presenters',
+                  flex: 2
+                }
+              ]
             },
             {
-              xtype: 'splitter',
-              width: 1
-            },
-            {
-              xtype: 'panel',
-              html: 'Speakers Panel',
-              flex: 1
+              html: 'Session Details',
+              flex: 2,
+              region: 'east',
+              split: true
             }
           ]
-        },
-        {
-          region: 'center',
-          xtype: 'panel',
-          html: 'Details Panel',
-          flex: 1,
-          title: 'Details Panel',
-          collapsible: true,
-          collapsed: true,
-          collapseDirection: 'right'
         }
       ]
     });
