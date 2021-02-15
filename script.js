@@ -25,7 +25,11 @@ let mySession1 = Ext.create('SessionModel', {
   approved: true
 });
 
-mySession1.save();
+mySession1.save({
+  success: function(session) {
+    console.log(session.getData());
+  }
+});
 
 // debugger;
 // if (!mySession1.isValid()) {
