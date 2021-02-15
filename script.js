@@ -13,18 +13,18 @@ Ext.define('SessionModel', {
 });
 
 let mySession1 = Ext.create('SessionModel', {
-  title: 'C++',
-  sessionLevel: 2
+  title: 'C',
+  sessionLevel: 4
 });
 
-debugger;
+// debugger;
 if (!mySession1.isValid()) {
   let errors = mySession1.validate();
   errors.each(function(rec) {
     console.log(rec);
   });
 } else {
-  debugger;
+  // debugger;
 }
 
 let mySession2 = Ext.create('SessionModel', {
