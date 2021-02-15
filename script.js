@@ -20,11 +20,18 @@ Ext.application({
               flex: 2
             },
             {
+              xtype: 'splitter',
+              width: 1
+            },
+            {
               xtype: 'panel',
               html: 'Speakers Panel',
               flex: 1
             }
           ]
+        },
+        {
+          xtype: 'splitter'
         },
         {
           xtype: 'panel',
