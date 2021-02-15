@@ -21,20 +21,23 @@ Ext.define('SessionModel', {
 
 let mySession1 = Ext.create('SessionModel', {
   title: 'C',
-  sessionLevel: 4
+  sessionLevel: 4,
+  approved: true
 });
 
-debugger;
-if (!mySession1.isValid()) {
-  let errors = mySession1.validate();
-  errors.each(function(rec) {
-    console.log(rec);
-  });
-} else {
-  debugger;
-}
+mySession1.save();
 
-let mySession2 = Ext.create('SessionModel', {
-  title: 'C#',
-  sessionLevel: 3
-});
+// debugger;
+// if (!mySession1.isValid()) {
+//   let errors = mySession1.validate();
+//   errors.each(function(rec) {
+//     console.log(rec);
+//   });
+// } else {
+//   debugger;
+// }
+
+// let mySession2 = Ext.create('SessionModel', {
+//   title: 'C#',
+//   sessionLevel: 3
+// });
