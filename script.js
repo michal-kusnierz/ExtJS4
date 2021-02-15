@@ -3,16 +3,18 @@ Ext.application({
   launch: function() {
     Ext.create('Ext.container.Viewport', {
       layout: {
-        type: 'hbox',
-        align: 'stretch'
+        type: 'border'
       },
       items: [
         {
+          region: 'west',
           xtype: 'panel',
           layout: {
             type: 'vbox',
             align: 'stretch'
           },
+          flex: 1,
+          split: true,
           items: [
             {
               xtype: 'panel',
@@ -31,12 +33,14 @@ Ext.application({
           ]
         },
         {
-          xtype: 'splitter'
-        },
-        {
+          region: 'center',
           xtype: 'panel',
           html: 'Details Panel',
-          flex: 3
+          flex: 1,
+          title: 'Details Panel',
+          collapsible: true,
+          collapsed: true,
+          collapseDirection: 'right'
         }
       ]
     });
