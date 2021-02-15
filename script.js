@@ -19,17 +19,28 @@ Ext.define('SessionModel', {
   }
 });
 
-let mySession1 = Ext.create('SessionModel', {
-  title: 'C',
-  sessionLevel: 4,
-  approved: true
-});
+let sessionBringBack = Ext.ModelManager.getModel('SessionModel');
 
-mySession1.save({
+// api/session/id → example id '19'
+
+sessionBringBack.load(19,{
   success: function(session) {
     console.log(session.getData());
   }
 });
+
+
+// let mySession1 = Ext.create('SessionModel', {
+//   title: 'C',
+//   sessionLevel: 4,
+//   approved: true
+// });
+
+// mySession1.save({
+//   success: function(session) {
+//     console.log(session.getData());
+//   }
+// });
 
 // debugger;
 // if (!mySession1.isValid()) {
