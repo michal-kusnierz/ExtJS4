@@ -19,7 +19,7 @@ let mySession1 = Ext.create('SessionModel', {
 
 if (!mySession1.isValid()) {
   let errors = mySession1.validate();
-  errors.for(function(rec) {
+  errors.each(function(rec) {
     console.log(rec);
   });
 }
