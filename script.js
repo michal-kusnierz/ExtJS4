@@ -11,6 +11,7 @@ Ext.application({
         autoSync: true,
         proxy: {
           type: 'rest',
+          url: './data/Ext/sessions.json',
           reader: {
             type: 'json',
             root: 'data'
