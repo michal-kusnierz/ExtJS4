@@ -5,6 +5,11 @@ Ext.application({
     Ext.define('SessionGridPanel', {
       extend: 'Ext.grid.Panel',
       alias: 'widget.sessiongridpanel',
+      listeners: {
+        itemdblclick: function(gridpanel,record,item,e) {
+          console.log('click');
+        }
+      },
       store: {
         fields: [
           'id',
