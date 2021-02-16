@@ -26,15 +26,18 @@ Ext.application({
       columns: [
         { 
           xtype: 'gridcolumn',
-          dataIndex: 'id'
+          dataIndex: 'id',
+          text: 'Id'
         },
         { 
           xtype: 'gridcolumn',
-          dataIndex: 'title'
+          dataIndex: 'title',
+          text: 'Title'
         },
         { 
           xtype: 'gridcolumn',
-          dataIndex: 'approved'
+          dataIndex: 'approved',
+          text: 'Approved'
         }
       ]
     });
