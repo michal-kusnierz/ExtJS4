@@ -16,7 +16,11 @@ Ext.application({
             type: 'json',
             root: 'data'
           }
-        }
+        },
+        sorters: [
+          { property: 'approved' },
+          { property: 'title' }
+        ]
       },
       columns: [
         { 
