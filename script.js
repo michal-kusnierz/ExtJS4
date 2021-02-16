@@ -14,14 +14,21 @@ Ext.application({
           xtype: 'form',
           bodyPadding: 10,
           title: '',
+          defaults: {
+            labelWidth: 90,
+            margin: '0 0 10 0',
+            anchor: '90%'
+          },
           items: [
             {
               xtype: 'textfield',
-              name: 'title'
+              name: 'title',
+              fieldLabel: 'Title'
             },
             {
               xtype: 'checkbox',
-              name: 'approved'
+              name: 'approved',
+              fieldLabel: 'Approved'
             }
           ]
         }
