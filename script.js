@@ -1,6 +1,44 @@
 Ext.application({
   name: 'App',
   launch: function() {
+
+    let sessionGridPanel = Ext.create('Ext.grid.Panel', {
+      store: {
+        fields: ['id','title','approved'],
+        data: [
+          {
+            id: 101,
+            title: 'JavaScript for dummies',
+            approved: true
+          },
+          {
+            id: 102,
+            title: 'C# for Smarties',
+            approved: false
+          },
+          {
+            id: 103,
+            title: 'ExtJS for everyone',
+            approved: true
+          }
+        ]
+      },
+      columns: [
+        { 
+          xtype: 'gridcolumn',
+          dataIndex: 'id'
+        },
+        { 
+          xtype: 'gridcolumn',
+          dataIndex: 'title'
+        },
+        { 
+          xtype: 'gridcolumn',
+          dataIndex: 'approved'
+        }
+      ]
+    });
+
     Ext.create('Ext.container.Viewport', {
       layout: 'fit',
       items: [
@@ -18,13 +56,9 @@ Ext.application({
                 align: 'stretch'
               },
               items: [
+                sessionGridPanel,
                 {
-                  html: 'Sessions',
-                  flex: 6
-                },
-                {
-                  xtype: 'splitter',
-                  width: 1
+                  xtype: 'splitter'
                 },
                 {
                   html: 'Presenters',
