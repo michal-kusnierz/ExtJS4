@@ -32,7 +32,8 @@ Ext.application({
         { 
           xtype: 'gridcolumn',
           dataIndex: 'title',
-          text: 'Title'
+          text: 'Title',
+          flex: 1
         },
         { 
           xtype: 'gridcolumn',
