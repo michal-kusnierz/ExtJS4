@@ -6,7 +6,14 @@ Ext.application({
       extend: 'Ext.grid.Panel',
       alias: 'widget.sessiongridpanel',
       store: {
-        fields: ['id','title','approved'],
+        fields: [
+          'id',
+          {
+            name: 'title',
+            sortType: 'asUCText'
+          },
+          'approved'
+        ],
         autoLoad: true,
         autoSync: true,
         proxy: {
