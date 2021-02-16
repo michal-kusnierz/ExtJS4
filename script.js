@@ -73,7 +73,10 @@ Ext.application({
       ],
       features: [
         {
-          ftype: 'grouping'
+          ftype: 'grouping',
+          groupHeaderTpl: [
+            '{[values.rows[0].get(\'sessionTimePretty\')]} (Session Count: {rows.length})'
+          ]
         }
       ]
     });
