@@ -2,7 +2,9 @@ Ext.application({
   name: 'App',
   launch: function() {
 
-    let sessionGridPanel = Ext.create('Ext.grid.Panel', {
+    Ext.define('SessionGridPanel', {
+      extend: 'Ext.grid.Panel',
+      alias: 'widget.sessiongridpanel',
       store: {
         fields: ['id','title','approved'],
         data: [
@@ -62,7 +64,10 @@ Ext.application({
                 align: 'stretch'
               },
               items: [
-                sessionGridPanel,
+                {
+                  xtype: 'sessiongridpanel',
+                  flex: 3
+                },
                 {
                   xtype: 'splitter'
                 },
