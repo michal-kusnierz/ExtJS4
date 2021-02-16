@@ -12,7 +12,22 @@ Ext.application({
             name: 'title',
             sortType: 'asUCText'
           },
-          'approved'
+          'approved',
+          {
+            dateFormat: 'c',
+            name: 'sessionTimeDateTime',
+            sortType: 'asDate',
+            type: 'date'
+          },
+          {
+            convert: function(v, rec) {
+              let convertIt = Ext.util.Format.dateRenderer('m/d/Y g:i a');
+              let pretty = convertIt(rec.get('sessionTimeDateTime'));
+              return pretty;
+            },
+            name: 'sessionTimePretty',
+            type: 'string'
+          }
         ],
         autoLoad: true,
         autoSync: true,
@@ -27,7 +42,8 @@ Ext.application({
         sorters: [
           { property: 'approved' },
           { property: 'title' }
-        ]
+        ],
+        groupField: 'sessionTimeDateTime'
       },
       columns: [
         { 
@@ -47,6 +63,17 @@ Ext.application({
           xtype: 'gridcolumn',
           dataIndex: 'approved',
           text: 'Approved'
+        },
+        { 
+          xtype: 'gridcolumn',
+          dataIndex: 'sessionTimePretty',
+          text: 'Session Start Time',
+          width: 150
+        }
+      ],
+      features: [
+        {
+          ftype: 'grouping'
         }
       ]
     });
