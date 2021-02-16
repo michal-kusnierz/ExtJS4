@@ -7,6 +7,8 @@ Ext.application({
       alias: 'widget.sessiongridpanel',
       store: {
         fields: ['id','title','approved'],
+        autoLoad: true,
+        autoSync: true,
         proxy: {
           type: 'rest',
           reader: {
