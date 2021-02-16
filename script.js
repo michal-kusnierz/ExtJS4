@@ -2,12 +2,39 @@ Ext.application({
   name: 'App',
   launch: function() {
 
+    Ext.define('SessionForm', {
+      extend: 'Ext.window.Window',
+      alias: 'widget.sessionform',
+      padding: 5,
+      width: 600,
+      title: 'Edit Sessions',
+      model: 'true',
+      items: [
+        {
+          xtype: 'form',
+          bodyPadding: 10,
+          title: '',
+          items: [
+            {
+              xtype: 'textfield',
+              name: 'title'
+            },
+            {
+              xtype: 'checkbox',
+              name: 'approved'
+            }
+          ]
+        }
+      ]
+    });
+
     Ext.define('SessionGridPanel', {
       extend: 'Ext.grid.Panel',
       alias: 'widget.sessiongridpanel',
       listeners: {
         itemdblclick: function(gridpanel,record,item,e) {
-          console.log('click');
+          let formWindow = Ext.create('SessionForm');
+          formWindow.show();
         }
       },
       store: {
