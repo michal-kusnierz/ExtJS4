@@ -7,23 +7,13 @@ Ext.application({
       alias: 'widget.sessiongridpanel',
       store: {
         fields: ['id','title','approved'],
-        data: [
-          {
-            id: 101,
-            title: 'JavaScript for dummies',
-            approved: true
-          },
-          {
-            id: 102,
-            title: 'C# for Smarties',
-            approved: false
-          },
-          {
-            id: 103,
-            title: 'ExtJS for everyone',
-            approved: true
+        proxy: {
+          type: 'rest',
+          reader: {
+            type: 'json',
+            root: 'data'
           }
-        ]
+        }
       },
       columns: [
         { 
