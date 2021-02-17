@@ -9,6 +9,10 @@ Ext.application({
     'SE.view.MainView'
   ],
 
+  stores: [
+    'Sessions'
+  ],
+
   views: [
     'Sessions',
     'SessionForm'
