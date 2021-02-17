@@ -1,5 +1,9 @@
+Ext.Loader.setConfig({
+  enabled: true
+});
+
 Ext.application({
-  name: 'App',
+  name: 'MyApp',
   launch: function() {
 
     Ext.define('SessionForm', {
