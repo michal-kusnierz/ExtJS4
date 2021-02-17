@@ -23,7 +23,8 @@ Ext.application({
             {
               xtype: 'textfield',
               name: 'title',
-              fieldLabel: 'Title'
+              fieldLabel: 'Title',
+              allowBlank: false
             },
             {
               xtype: 'checkbox',
@@ -44,9 +45,9 @@ Ext.application({
             {
               xtype: 'button',
               text: 'Save',
+              formBind: true,
               margin: '5',
               handler: function(button) {
-                debugger;
                 let form = button.up().up().down('form');
                 form.updateRecord();
                 button.up('window').destroy();
