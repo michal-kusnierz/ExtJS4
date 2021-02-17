@@ -44,12 +44,18 @@ Ext.application({
             {
               xtype: 'button',
               text: 'Save',
-              margin: '5'
+              margin: '5',
+              handler: function(button) {
+
+              }
             },
             {
               xtype: 'button',
               text: 'Cancel',
-              margin: '5'
+              margin: '5',
+              handler: function(button) {
+                button.up('window').destroy();
+              }
             }
           ]
         }
@@ -62,7 +68,6 @@ Ext.application({
       listeners: {
         itemdblclick: function(gridpanel,record,item,e) {
           let formWindow = Ext.create('SessionForm');
-          debugger;
 
           let form = formWindow.down('form');
           form.loadRecord(record);
