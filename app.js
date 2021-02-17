@@ -10,7 +10,8 @@ Ext.application({
   ],
 
   views: [
-    'Sessions'
+    'Sessions',
+    'SessionForm'
   ],
 
   launch: function() {
