@@ -41,6 +41,11 @@ Ext.application({
       listeners: {
         itemdblclick: function(gridpanel,record,item,e) {
           let formWindow = Ext.create('SessionForm');
+          debugger;
+
+          let form = formWindow.down('form');
+          form.loadRecord(record);
+          
           formWindow.show();
         }
       },
