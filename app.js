@@ -9,6 +9,10 @@ Ext.application({
     'SE.view.MainView'
   ],
 
+  views: [
+    'Sessions'
+  ],
+
   launch: function() {
     Ext.create('SE.view.MainView');
   }

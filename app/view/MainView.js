@@ -17,8 +17,7 @@ Ext.define('SE.view.MainView', {
           },
           items: [
             {
-              // xtype: 'sessiongridpanel',
-              html: 'sessions',
+              xtype: 'sessiongridpanel',
               flex: 3
             },
             {
