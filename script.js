@@ -46,7 +46,10 @@ Ext.application({
               text: 'Save',
               margin: '5',
               handler: function(button) {
-
+                debugger;
+                let form = button.up().up().down('form');
+                form.updateRecord();
+                button.up('window').destroy();
               }
             },
             {
