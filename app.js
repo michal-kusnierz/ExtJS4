@@ -13,6 +13,10 @@ Ext.application({
     'Sessions'
   ],
 
+  models: [
+    'Session'
+  ],
+
   views: [
     'Sessions',
     'SessionForm'
