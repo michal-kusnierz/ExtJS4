@@ -18,6 +18,9 @@ Ext.define('SE.controller.SessionController', {
         itemdblclick: this.onItemdblclick,
 
         select: function(rowmodel, record, index, eOpts) {
+
+          Ext.suspendLayouts();
+
           let sessionId = record.get('id');
           let presenterIds = [];
           let spStore = this.getSessionPresentersStore();
@@ -35,7 +38,9 @@ Ext.define('SE.controller.SessionController', {
               }
             }
             return foundMatch;
-          })
+          });
+
+          Ext.resumeLayouts();
         }
       }
     });
