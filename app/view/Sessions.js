@@ -13,24 +13,24 @@ Ext.define('SE.view.Sessions', {
       dataIndex: 'title',
       text: 'Title',
       flex: 1,
-      minWidth: 150,
-      width: 100
+      minWidth: 150
     },
     { 
-      xtype: 'gridcolumn',
+      xtype: 'checkcolumn',
       dataIndex: 'approved',
       text: 'Approved'
     },
     { 
       xtype: 'gridcolumn',
       dataIndex: 'sessionTimePretty',
-      text: 'Session Start Time',
-      width: 150
+      text: 'Session Time',
+      width: 200
     }
   ],
   features: [
     {
       ftype: 'grouping',
+      startCollapsed: false,
       groupHeaderTpl: [
         '{[values.rows[0].get(\'sessionTimePretty\')]} (Session Count: {rows.length})'
       ]
