@@ -39,7 +39,7 @@ Ext.define('SE.model.Presenter', {
   
   proxy: {
     type: 'rest',
-    url: '/data/Ext/presenters.json',
+    url: './data/Ext/presenters.json',
     reader: {
       type: 'json',
       root: 'data'
