@@ -1,5 +1,10 @@
 Ext.define('SE.controller.SessionController', {
   extend: 'Ext.app.Controller',
+
+  stores: [
+    'Sessions', 'Presenters', 'SessionPresenters'
+  ],
+  
   init: function() {
     this.control({
       'sessiongridpanel': {
