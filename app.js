@@ -14,11 +14,15 @@ Ext.application({
   ],
 
   stores: [
-    'Sessions'
+    'Sessions',
+    'SessionPresenters',
+    'Presenters'
   ],
 
   models: [
-    'Session'
+    'Session',
+    'SessionPresenter',
+    'Presenter'
   ],
 
   views: [
