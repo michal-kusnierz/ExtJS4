@@ -4,16 +4,19 @@ Ext.define('SE.controller.SessionController', {
   stores: [
     'Sessions', 'Presenters', 'SessionPresenters'
   ],
+
+  onItemdblclick: function(gridpanel,record,item,e) {
+    let formWindow = Ext.create('SE.view.SessionForm');
+    let form = formWindow.down('form');
+    form.loadRecord(record);
+    formWindow.show();
+  },
   
   init: function() {
     this.control({
       'sessiongridpanel': {
-        itemdblclick: function(gridpanel,record,item,e) {
-          let formWindow = Ext.create('SE.view.SessionForm');
-          let form = formWindow.down('form');
-          form.loadRecord(record);
-          formWindow.show();
-        },
+        itemdblclick: this.onItemdblclick,
+
         select: function(rowmodel, record, index, eOpts) {
           let sessionId = record.get('id');
           let presenterIds = [];
