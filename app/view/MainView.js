@@ -31,7 +31,8 @@ Ext.define('SE.view.MainView', {
           ]
         },
         {
-          html: 'Session Details',
+          // html: 'Session Details',
+          xtype: 'detailspanel',
           flex: 2,
           region: 'east',
           split: true
