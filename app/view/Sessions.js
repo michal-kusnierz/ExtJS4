@@ -1,16 +1,6 @@
 Ext.define('SE.view.Sessions', {
   extend: 'Ext.grid.Panel',
   alias: 'widget.sessiongridpanel',
-  listeners: {
-    itemdblclick: function(gridpanel,record,item,e) {
-      let formWindow = Ext.create('SE.view.SessionForm');
-
-      let form = formWindow.down('form');
-      form.loadRecord(record);
-
-      formWindow.show();
-    }
-  },
   store: 'Sessions',
   columns: [
     { 
