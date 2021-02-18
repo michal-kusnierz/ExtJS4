@@ -24,7 +24,8 @@ Ext.define('SE.view.MainView', {
               xtype: 'splitter'
             },
             {
-              html: 'Presenters',
+              // html: 'Presenters',
+              xtype: 'presenters',
               flex: 2
             }
           ]
