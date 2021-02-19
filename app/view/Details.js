@@ -5,6 +5,6 @@ Ext.define('SE.view.Details', {
   autoScroll: true,
   bodyPadding: 10,
 
-  tpl: 'title: {test}',
+  tpl: 'title: {title}',
 
 });
