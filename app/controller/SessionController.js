@@ -49,6 +49,9 @@ Ext.define('SE.controller.SessionController', {
 
           // Fill in details on right side (Panel) for session:
           let detailsPanel= this.getDetails();  // 'details' comes from refs []
+          detailsPanel.update({
+            test: 'from the controller'
+          });
 
           Ext.resumeLayouts();
         }
