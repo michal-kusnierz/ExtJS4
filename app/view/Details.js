@@ -5,6 +5,14 @@ Ext.define('SE.view.Details', {
   autoScroll: true,
   bodyPadding: 10,
 
-  tpl: 'title: {title}',
+  tpl: [
+    '<br>Title: {title}',
+    '<br>Description: {description}',
+    '<br>',
+    '<tpl for="presenters">',   // this tpl functionality iterates over an attribute 
+    ' <br>Presenter: {firstName} {lastName}',
+    ' <br><img class="leaderPhoto" src="http://www.siliconvalley-codecamp.com/{imageUrl}?width=150">',
+    '</tpl>'
+  ]
 
 });

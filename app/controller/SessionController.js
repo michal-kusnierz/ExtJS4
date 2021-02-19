@@ -59,6 +59,12 @@ Ext.define('SE.controller.SessionController', {
           let sessions = record.getData();
 
           let detailsPanel= this.getDetails();  // 'details' comes from refs []
+
+          sessions.presenters = [];
+          this.getPresentersStore().each(function (presenterRecord) {
+            sessions.presenters.push(presenterRecord.getData());
+          });
+          
           detailsPanel.update(sessions);
 
           Ext.resumeLayouts();
