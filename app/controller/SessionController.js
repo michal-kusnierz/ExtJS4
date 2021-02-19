@@ -5,6 +5,13 @@ Ext.define('SE.controller.SessionController', {
     'Sessions', 'Presenters', 'SessionPresenters'
   ],
 
+  refs: [
+    {
+      ref: 'details',
+      selector: 'detailspanel'      // alias of component
+    }
+  ],
+
   onItemdblclick: function(gridpanel,record,item,e) {
     let formWindow = Ext.create('SE.view.SessionForm');
     let form = formWindow.down('form');
@@ -39,6 +46,9 @@ Ext.define('SE.controller.SessionController', {
             }
             return foundMatch;
           });
+
+          // Fill in details on right side (Panel) for session:
+          let detailsPanel= this.getDetails();  // 'details' comes from refs []
 
           Ext.resumeLayouts();
         }
