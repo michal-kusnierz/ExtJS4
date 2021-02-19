@@ -9,6 +9,14 @@ Ext.define('SE.controller.SessionController', {
     {
       ref: 'details',
       selector: 'detailspanel'      // alias of component
+    },
+    {
+      ref: 'presenters',
+      selector: 'presenters'
+    },
+    {
+      ref: 'sessions',
+      selector: 'sessiongridpanel'
     }
   ],
 
